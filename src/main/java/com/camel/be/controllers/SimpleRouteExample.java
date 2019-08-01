@@ -19,6 +19,10 @@ public class SimpleRouteExample extends RouteBuilder {
 		restConfiguration()
 		.component("servlet")
 		.bindingMode(RestBindingMode.json);
+		
+		// Um exemplo de chamada, as urls obrigatóriamente devem ter o /camel no path, pois é dessa forma
+		// que o spring configura o servlet do apache camel.
+		// http://localhost:8080/endpoints-test/camel/defesa-civil
 		 
 		// https://camel.apache.org/uris.html
 		rest("/defesa-civil")
